@@ -1,0 +1,15 @@
+创建新版本库
+git clone git@123.57.131.213:geyang/12.git
+cd 12
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+已存在的文件夹
+cd existing_folder
+git init
+git remote add origin git@123.57.131.213:geyang/12.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
