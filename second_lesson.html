@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VUE核心概念</title>
+</head>
+<body>
+    <div id="app">
+        <h1 v-html="html"></h1>
+        <a v-bind:href="link">{{text}}</a><br>
+        网址链接：<input type="text" v-model="link"/>
+        网页文本：<input type="text" v-model="text"/>
+        <p v-on:click="warn">点击弹窗</p>
+        <p @click="warn">点击弹窗</p>
+        输入数字：<input type="text" v-model="number"/>  <br>
+        结果: <span v-if="number<100">小于100</span>
+        <span v-if="number==100">等于100</span>
+        <span v-if="number>100">大于100</span>
+        <span v-show="number<100">小于100</span>
+        <span v-show="number==100">等于100</span>
+        <span v-show="number>100">大于100</span>
+        <ul>
+            <li v-for="(item, i) in products" :key="i">
+                {{item.name}} 库存：{{item.stock}}
+            </li>
+        </ul>
+        <p>姓：{{firstName}}</p>
+        <p>名：{{lastName}}</p>
+        <p>计算全名：{{fullName}}</p>
+        <p>计算全名：{{fullName}}</p>
+        <p>计算全名：{{fullName}}</p>
+        <p>方法全名：{{getFullName()}}</p>
+        <p>方法全名：{{getFullName()}}</p>
+        <p>方法全名：{{getFullName()}}</p>
+    </div>
+<!--    <div id="one">-->
+<!--        <h1>{{title}}</h1>-->
+<!--        <ol>-->
+<!--            <li v-for="(item, i) in products" :key="i">-->
+<!--                {{item.name}} 库存：{{item.stock}}-->
+<!--            </li>-->
+<!--        </ol>-->
+<!--        <p>-->
+<!--            商品名：<input type="text" v-model="newProduct.name"> 库存：<input type="number" v-model="newProduct.stock">-->
+<!--            <button @click="addProduct">添加</button>-->
+<!--        </p>-->
+<!--    </div>-->
+
+<!--    <div id="two">-->
+<!--        <h1>{{title}}</h1>-->
+<!--        <ol>-->
+<!--            <li v-for="(item, i) in products" :key="i">-->
+<!--                {{item.name}} 库存：{{item.stock}}-->
+<!--            </li>-->
+<!--        </ol>-->
+<!--        <p>-->
+<!--            商品名：<input type="text" v-model="newProduct.name"> 库存：<input type="number" v-model="newProduct.stock">-->
+<!--            <button @click="addProduct">添加</button>-->
+<!--        </p>-->
+<!--    </div>-->
+
+<!--    <div id="three"></div>-->
+</body>
+<script src="js/vue.js"></script>
+<script>
+    var vm=new Vue({//配置
+        el: "#app",//配置模板
+        data: {//配置数据
+            html: `<span style="color: cornflowerblue">这是第二节课</span>`,
+            text: "百度",
+            link: "https://www.baidu.com/",
+            number: 0,
+            products: [
+                { name: "方便面", stock: 10},
+                { name: "汽水", stock: 20},
+                { name: "面包", stock: 30},
+                { name: "棒棒糖", stock: 40},
+                { name: "巧克力", stock: 50},
+            ],
+            firstName: "葛",
+            lastName: "杨",
+        },
+        computed: {
+            fullName(){
+                console.log("计算全名");
+                return this.firstName+this.lastName;
+            }
+            /*fullName:{
+                get(){
+                    console.log("计算全名");
+                    return this.firstName+this.lastName;
+                },
+                set(val){
+                    console.log("计算全名赋值");
+                    this.firstName=val[0];
+                    this.lastName=val.substr(1);
+                }
+            }*/
+        },
+        methods: {
+            warn(){
+                alert("v-on实现");
+            },
+            getFullName(){
+                console.log("方法全名");
+                return this.firstName+this.lastName;
+            }
+        },
+    });
+    /*//挂载方式1
+    var vm=new Vue({//配置
+        el: "#one",//配置模板
+        data: {//配置数据
+            title: "欢迎来到Vue",
+            products: [
+                { name: "方便面", stock: 10},
+                { name: "汽水", stock: 20},
+                { name: "面包", stock: 30},
+                { name: "棒棒糖", stock: 40},
+                { name: "巧克力", stock: 50},
+            ],
+            newProduct: {
+                name: "",
+                stock: 0,
+            }
+        },
+        methods: {//配置方法
+            addProduct(){
+                this.products.push({
+                    name: this.newProduct.name,
+                    stock: this.newProduct.stock,
+                });
+                this.newProduct.name="";
+                this.newProduct.stock=0;
+            }
+        }
+    });
+
+    //挂在方式2
+    var vm_2=new Vue({//配置
+        data: {//配置数据
+            title: "欢迎来到Vue",
+            products: [
+                { name: "方便面", stock: 10},
+                { name: "汽水", stock: 20},
+                { name: "面包", stock: 30},
+                { name: "棒棒糖", stock: 40},
+                { name: "巧克力", stock: 50},
+            ],
+            newProduct: {
+                name: "",
+                stock: 0,
+            }
+        },
+        methods: {//配置方法
+            addProduct(){
+                this.products.push({
+                    name: this.newProduct.name,
+                    stock: this.newProduct.stock,
+                });
+                this.newProduct.name="";
+                this.newProduct.stock=0;
+            }
+        }
+    });
+    vm_2.$mount("#two");
+
+    var vm_3=new Vue({//配置
+        el: "#three",
+        template: `<div id="three">
+        <h1>{{title}}</h1>
+        <ol>
+            <li v-for="(item, i) in products" :key="i">
+                {{item.name}} 库存：{{item.stock}}
+            </li>
+        </ol>
+        <p>
+            商品名：<input type="text" v-model="newProduct.name"> 库存：<input type="number" v-model="newProduct.stock">
+            <button @click="addProduct">添加</button>
+        </p>
+        </div>`,
+        data: {//配置数据
+            title: "欢迎来到Vue",
+            products: [
+                { name: "方便面", stock: 10},
+                { name: "汽水", stock: 20},
+                { name: "面包", stock: 30},
+                { name: "棒棒糖", stock: 40},
+                { name: "巧克力", stock: 50},
+            ],
+            newProduct: {
+                name: "",
+                stock: 0,
+            }
+        },
+        methods: {//配置方法
+            addProduct(){
+                this.products.push({
+                    name: this.newProduct.name,
+                    stock: this.newProduct.stock,
+                });
+                this.newProduct.name="";
+                this.newProduct.stock=0;
+            }
+        }
+    });*/
+
+
+    /*可是在前端控制台以vm.title="$$$"改变title的值*/
+    /*{{title}}: 获取配置数据
+
+    v-for="(item, i) in products" :key="i"
+    v-for="": 循环遍历
+
+    v-model="": 绑定数据
+
+    @click="": 绑定方法*/
+    /*vue挂载的两种方式：
+    1.vue实例里写上el: "",//配置模板
+    2.写好vue实例，通过$mount()方法挂载*/
+
+    /*vue模板书写在：
+    1.普通html dom
+    2.vue实例中的template中
+    3.vue实例中的render()函数
+
+    vue模板的书写内容
+    1.静态html dom
+    2.插入值{{XXX}}
+    3.指令:
+    1 v-html: 绑定元素innerHTML
+    2 v-bind: 绑定属性
+    3 v-on: 绑定事件
+    4 v-if: 判断元素是否需要渲染
+    5 v-show: 判断元素是否应该显示
+    6 v-for: 循环生成元素
+    7 v-bind:key: 用于帮助再重新渲染时元素比对，通常和v-for连用，以提高渲染效率
+    8 v-model: 双向绑定值
+
+    <input type="text" v-model="number"/>相当于简化为
+    <input type="text" v-bind:value="number" @input="text=$event.target.value"/>
+
+    计算属性与方法之间的区别：
+    1.计算属性可以被当成属性使用，二方法需要调用
+    2.计算属性会进行缓存，若依赖不变，则直接使用缓存结果，不需要重新计算
+    3.计算属性可当成属性进行赋值*/
+</script>
+</html>
