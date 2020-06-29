@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VUE初体验</title>
+</head>
+<body>
+    <div id="one">
+        <h1>{{title}}</h1><!--获取配置的数据-->
+        <ol>
+            <li v-for="(item, i) in products" :key="i"><!--循环遍历-->
+                {{item.name}} 库存：{{item.stock}}
+            </li>
+        </ol>
+        <p>
+            商品名：<input type="text" v-model="newProduct.name"> 库存：<input type="number" v-model="newProduct.stock">
+            <button @click="addProduct">添加</button>
+            <!--
+            v-model: 绑定数据
+            @click=" ": 绑定方法
+            -->
+        </p>
+    </div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+    var vm=new Vue({//配置
+        el: "#one",//配置模板
+        data: {//配置数据
+            title: "欢迎来到Vue",
+            products: [
+                { name: "方便面", stock: 10},
+                { name: "汽水", stock: 20},
+                { name: "面包", stock: 30},
+                { name: "棒棒糖", stock: 40},
+                { name: "巧克力", stock: 50},
+            ],
+            newProduct: {
+                name: "",
+                stock: 0,
+            }
+        },
+        methods: {//配置方法
+            addProduct(){
+                this.products.push({
+                    name: this.newProduct.name,
+                    stock: this.newProduct.stock,
+                });
+                this.newProduct.name="";
+                this.newProduct.stock=0;
+            }
+        }
+    });
+
+    /*可是在前端控制台以vm.title="$$$"改变title的值*/
+    /*{{title}}: 获取配置数据
+
+    v-for="(item, i) in products" :key="i"
+    v-for="": 循环遍历
+
+    v-model="": 绑定数据
+
+    @click="": 绑定方法*/
+</script>
+</html>
