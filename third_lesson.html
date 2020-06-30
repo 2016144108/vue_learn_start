@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件核心概念</title>
+</head>
+<body>
+<div id="three">
+
+</div>
+</body>
+<script src="js/vue.js"></script>
+<script src="js/third_lesson_1.js" type="module"></script>
+<script type="module">
+    /*一个完整页面过于复杂时会出现
+    1.代码凌乱臃肿
+    2.不易协作
+    3.难以复用
+    等问题
+    所以使用组件可以将js代码，模板代码，css代码进行组件化*/
+
+    /*vue项目实现结构：
+    1.书写main.js为配置js实现根组件App.js
+    2.书写APP.js为根组件来实现其他组件
+    3.其他组件*/
+    import ThreeComponent from "./js/components/third_component.js";//组件导入
+    /*Vue.component("$$",ss);组件全局注册*/
+    var template= `<div id="three">
+    <h1>{{text}}</h1>
+    <ThreeComponent/>
+    <ThreeComponent name="河阳" age="12"/>
+    <ThreeComponent v-for="(item, i) in users" :key="i" :name="item.name" :age="item.age"/>
+    </div>`;//组件引用
+
+    var vm= new Vue({
+        el: "#three",
+        data: {
+            text: "组件核心概念",
+            users: [
+                {name: "123", age: 12},
+                {name: "456", age: 45},
+                {name: "789", age: 67},
+            ],
+        },
+        template,
+        components: {
+            ThreeComponent,//局部注册
+        },
+    });
+
+    /*var vm= new Vue({
+        el: "#three",
+        components: {
+            ThreeComponent,//局部注册
+        },
+        render(createElement){
+            return createElement(ThreeComponent);//渲染组件
+        }
+    });*/
+</script>
+</html>

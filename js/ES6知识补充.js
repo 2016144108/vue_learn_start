@@ -70,3 +70,7 @@ console.log(shu_3(3,4))
 //箭头函数只有一个参数
 var shu_4 =a=> a*a;
 console.log(shu_4(4))
+
+
+//模块化
+
