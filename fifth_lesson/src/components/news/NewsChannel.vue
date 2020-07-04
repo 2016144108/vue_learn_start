@@ -13,7 +13,7 @@
             return{
                 channels: [],//类型数据
                 isCollapse: true,//折叠状态
-                channelId: null,//选中ID
+                channelId: "5572a108b3cdc86cf39001cd",//选中ID
             };
         },
         async created() {//获取数据
