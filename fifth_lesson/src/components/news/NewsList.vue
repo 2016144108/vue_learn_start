@@ -42,6 +42,11 @@
 </script>
 
 <style scoped>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
     .item{
         height: 165px;
         margin-bottom: 20px;
@@ -65,7 +70,7 @@
         height: 30px;
         overflow: hidden;
         left: 230px;
-        top: -20px;
+        top: 0;
         width: 850px;
         color: cornflowerblue;
         cursor: pointer;
@@ -83,7 +88,7 @@
     p{
         position: absolute;
         left: 230px;
-        top: 42px;
+        top: 58px;
         width: 850px;
     }
     hr{

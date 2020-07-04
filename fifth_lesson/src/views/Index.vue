@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="margin-top: 70px">
         <div v-if="show" style="width: 1080px;margin: 0 auto;">
           <Banner :banners="banners"/><!--轮播图组件-->
         </div>

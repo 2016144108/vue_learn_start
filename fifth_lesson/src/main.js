@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from './routes/router.js'
 //import {AppCode} from "./services/config.js";
 // import "./services/newService.js"
 import {getNewsChannels} from "./services/newService.js";
@@ -26,5 +27,6 @@ getResp();*/
 });*/
 
 new Vue({
+  router,//配置路由到vue实例中
   render: h => h(App)
 }).$mount('#app')

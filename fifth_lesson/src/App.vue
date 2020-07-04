@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <Index></Index>
+    <!--<Index></Index>-->
+    <!--该组件会根据不同的访问路径渲染不同的组件-->
+    <router-view></router-view>
+    <Header></Header>
 <!--    <div v-if="show" style="width: 1080px;margin: 0 auto;">-->
 <!--      <Banner :banners="banners"/>&lt;!&ndash;轮播图组件&ndash;&gt;-->
 <!--    </div>-->
@@ -23,7 +26,9 @@
 </template>
 
 <script>
-import Index from "./views/Index.vue"
+
+  /*import Index from "./views/Index.vue"*/
+  import Header from "./components/header/Header.vue"
 // import NewsChannel from "./components/news/NewsChannel"
 // import NewsList from "./components/news/NewsList"
 // import banner_1 from "./assets/079e29d5d2f84a268aaa0b3be1ef0700.jpg"
@@ -37,7 +42,8 @@ import Index from "./views/Index.vue"
 export default {
   name: 'App',
   components: {
-    Index,
+    /*Index,*/
+    Header,
     // NewsChannel,
     // NewsList,
     // Loading,

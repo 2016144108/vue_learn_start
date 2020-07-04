@@ -21,6 +21,11 @@
 </script>
 
 <style scoped>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
     .item{
         position: fixed;
         left: 50%;

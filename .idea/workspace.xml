@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96e96212-39f0-4a6d-8cd2-361431e7531e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fifth_lesson/src/views/Index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fifth_lesson/src/components/header/Header.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fifth_lesson/src/routes/router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fifth_lesson/src/routes/router_config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fifth_lesson/src/views/404.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fifth_lesson/src/views/ChannelNews.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fifth_lesson/src/views/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fifth_lesson/src/views/Register.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fifth_lesson/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/fifth_lesson/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fifth_lesson/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/fifth_lesson/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fifth_lesson/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/fifth_lesson/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fifth_lesson/src/components/news/NewsChannel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/fifth_lesson/src/components/news/NewsChannel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fifth_lesson/src/components/Load/Loading.vue" beforeDir="false" afterPath="$PROJECT_DIR$/fifth_lesson/src/components/Load/Loading.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fifth_lesson/src/components/container/CenterContainer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/fifth_lesson/src/components/container/CenterContainer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fifth_lesson/src/components/model/Model.vue" beforeDir="false" afterPath="$PROJECT_DIR$/fifth_lesson/src/components/model/Model.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fifth_lesson/src/components/news/NewsList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/fifth_lesson/src/components/news/NewsList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fifth_lesson/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/fifth_lesson/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fifth_lesson/src/views/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/fifth_lesson/src/views/Index.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,29 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fifth_lesson/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="52" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/container/CenterContainer.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fifth_lesson/src/services/newService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-              <folding>
-                <element signature="e#1#27#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-63">
+              <caret line="3" column="28" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -52,37 +43,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fifth_lesson/src/views/Index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+            <state relative-caret-position="21">
+              <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="29" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#hr#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#447#499#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/news/NewsChannel.vue">
+        <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/header/Header.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/news/NewsList.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="37" column="42" lean-forward="true" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-              <folding>
-                <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="167">
+              <caret line="88" column="27" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -90,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fifth_lesson/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" selection-start-line="11" selection-end-line="13" selection-end-column="3" />
+            <state relative-caret-position="63">
+              <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <element signature="e#135#192#0" expanded="true" />
@@ -100,11 +75,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/model/Model.vue">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fifth_lesson/src/routes/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+            <state relative-caret-position="42">
+              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fifth_lesson/src/routes/router_config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fifth_lesson/src/views/ChannelNews.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fifth_lesson/src/views/404.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" selection-start-line="10" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -115,8 +117,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -145,20 +147,27 @@
         <option value="$PROJECT_DIR$/fifth_lesson/babel.config.js" />
         <option value="$PROJECT_DIR$/fifth_lesson/src/components/Banner.vue" />
         <option value="$PROJECT_DIR$/fifth_lesson/src/services/config.js" />
-        <option value="$PROJECT_DIR$/fifth_lesson/src/main.js" />
         <option value="$PROJECT_DIR$/fifth_lesson/src/services/newService.js" />
         <option value="$PROJECT_DIR$/fifth_lesson/src/components/news/Loading.vue" />
-        <option value="$PROJECT_DIR$/fifth_lesson/src/components/Load/Loading.vue" />
         <option value="$PROJECT_DIR$/fifth_lesson/src/components/container/CenterContainer.vue" />
+        <option value="$PROJECT_DIR$/fifth_lesson/src/components/Load/Loading.vue" />
         <option value="$PROJECT_DIR$/fifth_lesson/src/components/model/Model.vue" />
-        <option value="$PROJECT_DIR$/fifth_lesson/src/App.vue" />
         <option value="$PROJECT_DIR$/fifth_lesson/src/components/news/NewsChannel.vue" />
-        <option value="$PROJECT_DIR$/fifth_lesson/src/views/Index.vue" />
         <option value="$PROJECT_DIR$/fifth_lesson/src/components/news/NewsList.vue" />
+        <option value="$PROJECT_DIR$/fifth_lesson/src/components/header/Header.vue" />
+        <option value="$PROJECT_DIR$/fifth_lesson/src/views/Login.vue" />
+        <option value="$PROJECT_DIR$/fifth_lesson/src/views/Register.vue" />
+        <option value="$PROJECT_DIR$/fifth_lesson/src/views/404.vue" />
+        <option value="$PROJECT_DIR$/fifth_lesson/src/main.js" />
+        <option value="$PROJECT_DIR$/fifth_lesson/src/views/Index.vue" />
+        <option value="$PROJECT_DIR$/fifth_lesson/src/App.vue" />
+        <option value="$PROJECT_DIR$/fifth_lesson/src/views/ChannelNews.vue" />
+        <option value="$PROJECT_DIR$/fifth_lesson/src/routes/router_config.js" />
+        <option value="$PROJECT_DIR$/fifth_lesson/src/routes/router.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-40" />
     <option name="y" value="40" />
     <option name="width" value="1750" />
@@ -195,15 +204,7 @@
               <item name="vue_learn_start" type="462c0819:PsiDirectoryNode" />
               <item name="fifth_lesson" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vue_learn_start" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vue_learn_start" type="462c0819:PsiDirectoryNode" />
-              <item name="fifth_lesson" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -223,19 +224,21 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="ts.external.directory.path" value="D:\WebStorm 2019.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\前端工程\vue_learn_start\fifth_lesson\src" />
-      <recent name="E:\前端工程\vue_learn_start\fifth_lesson\src\components" />
-      <recent name="E:\前端工程\vue_learn_start\fifth_lesson\src\components\Load" />
-      <recent name="E:\前端工程\vue_learn_start\fifth_lesson\src\components\banner" />
-      <recent name="E:\前端工程\vue_learn_start\fifth_lesson\src\components\news" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\前端工程\vue_learn_start\fifth_lesson\src\views" />
       <recent name="E:\前端工程\vue_learn_start\fifth_lesson\src\assets" />
       <recent name="E:\前端工程\vue_learn_start\js" />
       <recent name="E:\前端工程\vue_learn_start" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\前端工程\vue_learn_start\fifth_lesson\src\components" />
+      <recent name="E:\前端工程\vue_learn_start\fifth_lesson\src" />
+      <recent name="E:\前端工程\vue_learn_start\fifth_lesson\src\components\Load" />
+      <recent name="E:\前端工程\vue_learn_start\fifth_lesson\src\components\banner" />
+      <recent name="E:\前端工程\vue_learn_start\fifth_lesson\src\components\news" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -311,12 +314,13 @@
       <workItem from="1593510609608" duration="1728000" />
       <workItem from="1593610154934" duration="18073000" />
       <workItem from="1593694247037" duration="29000" />
-      <workItem from="1593821992323" duration="9734000" />
+      <workItem from="1593821992323" duration="10029000" />
+      <workItem from="1593850824923" duration="5991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50958000" />
+    <option name="totallyTimeSpent" value="57244000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -334,6 +338,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32905984" />
@@ -511,9 +516,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/services/newService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding>
+            <element signature="e#1#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/banner/Banner.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="-840">
           <caret line="23" column="24" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#img#0;n#li#0;n#ul#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -521,17 +536,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/news/NewsChannel.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/model/Model.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/Load/Loading.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        <state relative-caret-position="360">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/container/CenterContainer.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/news/NewsList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="88" column="27" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/views/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/views/Register.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/node_modules/vue-router/types/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/header/Header.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="88" column="27" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/views/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/views/ChannelNews.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/views/404.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" selection-start-line="10" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fifth_lesson/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" selection-start-line="11" selection-end-line="13" selection-end-column="3" />
+        <state relative-caret-position="63">
+          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
             <element signature="e#135#192#0" expanded="true" />
@@ -539,66 +647,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/model/Model.vue">
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/routes/router_config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state relative-caret-position="630">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/news/NewsChannel.vue">
+    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/routes/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/views/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#div#1;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#447#499#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/container/CenterContainer.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/services/newService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding>
-            <element signature="e#1#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fifth_lesson/src/components/news/NewsList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="37" column="42" lean-forward="true" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#hr#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="42">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
         </state>
       </provider>
     </entry>
