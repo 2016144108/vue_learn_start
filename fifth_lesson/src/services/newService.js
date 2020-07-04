@@ -23,6 +23,7 @@ export async function getNews(channelId, page = 1, limit = 10){//获取所有的
             page,//页码
             maxResult: limit,//每页最大信息个数
             needAllList: false,//关闭显示全部
+            needContent: 1,//需要内容
         }
     });
     return resp.data.showapi_res_body.pagebean.contentlist;

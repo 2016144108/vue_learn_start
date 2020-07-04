@@ -8,21 +8,32 @@
       <NewsChannel @change="handlechange"/>
       <hr style="width: 1080px;margin: 0 auto;">
     </div>
+    <div style="width: 1080px;margin: 20px auto 0;">
+      <NewsList :news="news"/>
+  </div>
   </div>
 </template>
 
 <script>
 import Banner from "./components/banner/Banner.vue"
 import NewsChannel from "./components/news/NewsChannel"
+import NewsList from "./components/news/NewsList"
 import banner_1 from "./assets/079e29d5d2f84a268aaa0b3be1ef0700.jpg"
 import banner_2 from "./assets/building.jpg"
 import banner_3 from "./assets/food.jpg"
+import {getNews} from "./services/newService.js"
 
 export default {
   name: 'App',
   components: {
     Banner,
     NewsChannel,
+    NewsList,
+  },
+  async created() {//获取数据
+    const resp=await getNews();
+    console.log(resp);
+    this.news=resp;
   },
   data() {
     return{
@@ -40,6 +51,7 @@ export default {
         },
       ],
       show: true,
+      news: [],
     };
   },
   methods:{
