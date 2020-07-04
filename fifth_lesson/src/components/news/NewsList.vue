@@ -56,6 +56,8 @@
     }
     h2{
         position: absolute;
+        height: 30px;
+        overflow: hidden;
         left: 230px;
         top: -20px;
         width: 850px;

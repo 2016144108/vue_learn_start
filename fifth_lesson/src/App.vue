@@ -10,7 +10,14 @@
     </div>
     <div style="width: 1080px;margin: 20px auto 0;">
       <NewsList :news="news"/>
-  </div>
+    </div>
+<!--    <div class="load_item">-->
+<!--      <Model>--><!--蒙层-->
+<!--        <CenterContainer>--><!--居中模板-->
+<!--          <Loading/>--><!--加载-->
+<!--        </CenterContainer>-->
+<!--      </Model>-->
+<!--    </div>-->
   </div>
 </template>
 
@@ -22,6 +29,9 @@ import banner_1 from "./assets/079e29d5d2f84a268aaa0b3be1ef0700.jpg"
 import banner_2 from "./assets/building.jpg"
 import banner_3 from "./assets/food.jpg"
 import {getNews} from "./services/newService.js"
+import Loading from "./components/Load/Loading.vue"
+import CenterContainer from "./components/container/CenterContainer.vue"
+import Model from "./components/model/Model.vue"
 
 export default {
   name: 'App',
@@ -29,6 +39,9 @@ export default {
     Banner,
     NewsChannel,
     NewsList,
+    Loading,
+    CenterContainer,
+    Model,
   },
   async created() {//获取数据
     const resp=await getNews();
