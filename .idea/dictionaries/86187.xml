@@ -3,8 +3,10 @@
     <words>
       <w>appcode</w>
       <w>axios</w>
+      <w>channelnews</w>
       <w>handlechange</w>
       <w>imgurl</w>
+      <w>newschannels</w>
     </words>
   </dictionary>
 </component>

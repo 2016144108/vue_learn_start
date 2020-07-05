@@ -8,15 +8,19 @@
                     </a>
                 </div>
                 <ul>
-                    <li><a href="">首页</a></li>
-                    <li><a href="">新闻中心</a></li>
-                    <li><a href="">时事报告</a></li>
-                    <li><a href="">关于</a></li>
-                    <li><a href="">联系我们</a></li>
+                    <!--<router-link to="/">首页</router-link>声明式导航-->
+                    <!--<router-link :to="{name: 'home'}">首页</router-link>声明式导航-->
+                    <li><router-link :to="{name: 'index'}">首页</router-link></li>
+                    <li v-for="item in newschannels.slice(0,5)" :key="item.channelId"><router-link :to="{
+                        name: 'channelnews',
+                        params: {
+                        id: item.channelId,
+                        }
+                    }">{{item.name}}</router-link></li>
                 </ul>
                 <div class="user">
-                    <span>登录</span>
-                    <span>注册</span>
+                    <span><router-link :to="{name: 'login'}">登录</router-link></span>
+                    <span><router-link :to="{name: 'register'}">注册</router-link></span>
                 </div>
             </div>
         </div>
@@ -24,8 +28,19 @@
 </template>
 
 <script>
+    import {getNewsChannels} from '../../services/newService';
+
     export default {
-        name: "Header"
+        name: "Header",
+        data(){
+            return{
+                newschannels: [],
+            };
+        },
+        async created() {
+            const resp=await getNewsChannels();
+            this.newschannels=resp;
+        }
     }
 </script>
 
@@ -34,6 +49,10 @@
         margin: 0;
         padding: 0;
         list-style: none;
+    }
+    a{
+        color: white;
+        text-decoration: none;
     }
     .header{
         height: 60px;
@@ -80,8 +99,20 @@
     }
     ul li a{
         text-decoration: none;
+        width: 100px;
+        text-align: center;
+        height: 60px;
+        line-height: 60px;
         color: white;
     }
+    /*ul li .router-link-exact-active{*/
+    /*    width: 100px;*/
+    /*    text-align: center;*/
+    /*    height: 60px;*/
+    /*    line-height: 60px;*/
+    /*    color: white;*/
+    /*    background-color: mediumseagreen;*/
+    /*}*/
     ul li:hover{
         background-color: mediumseagreen;
     }
