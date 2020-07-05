@@ -3,10 +3,16 @@
     <words>
       <w>appcode</w>
       <w>axios</w>
+      <w>changepage</w>
       <w>channelnews</w>
       <w>handlechange</w>
       <w>imgurl</w>
+      <w>maxpage</w>
+      <w>minpage</w>
+      <w>newpage</w>
       <w>newschannels</w>
+      <w>pagechange</w>
+      <w>pagelist</w>
     </words>
   </dictionary>
 </component>
