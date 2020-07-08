@@ -6,8 +6,28 @@ import store from './store/store.js'
 // import "./services/newService.js"
 import {getNewsChannels} from "./services/newService.js";
 import {getNews} from "./services/newService";
+import { login, whoami, logout, reg} from './services/userService'
 
 Vue.config.productionTip = false
+
+async function test(){
+  /*logout();*///注销
+  const resp_1 = await login({
+    loginId: "user",
+    loginPwd: "123123"
+  });
+  console.log(resp_1);//登录
+  const resp_2 = await whoami();
+  console.log(resp_2);//获取
+  let loginId = "geya", loginPwd = "geya", nickname = "geya";
+  const resp_3 = await reg({
+      loginId,
+      loginPwd,
+      nickname,
+      });//注册
+  console.log(resp_3);
+}
+test();
 
 /*
 //第一种使用方式
