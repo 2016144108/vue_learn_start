@@ -11,7 +11,10 @@
                     <!--<router-link to="/">首页</router-link>声明式导航-->
                     <!--<router-link :to="{name: 'home'}">首页</router-link>声明式导航-->
                     <li><router-link :to="{name: 'index'}">首页</router-link></li>
-                    <li v-for="item in newschannels.slice(0,5)" :key="item.channelId"><router-link :to="{
+                    <!--<li><router-link :to="{
+                        name: 'channelnews',
+                    }">{{isLoading}}</router-link></li>&lt;!&ndash;获取vuex仓库数据&ndash;&gt;-->
+                    <li v-for="item in data.slice(0,5)" :key="item.channelId"><router-link :to="{
                         name: 'channelnews',
                         params: {
                         id: item.channelId,
@@ -28,19 +31,47 @@
 </template>
 
 <script>
-    import {getNewsChannels} from '../../services/newService';
+    /*import {getNewsChannels} from '../../services/newService';*/
+    import {mapState} from 'vuex'
+    let result = mapState("channels",['data','isLoading']);
+    /*console.log(result);*/
 
     export default {
         name: "Header",
-        data(){
+        /*data(){
             return{
-                newschannels: [],
+                id: "index",
             };
-        },
-        async created() {
+        },*/
+        /*async created() {
             const resp=await getNewsChannels();
             this.newschannels=resp;
+        }*/
+        /*computed: {//获取仓库数据
+            isLoading(){
+                return this.$store.state.channels.isLoading;
+            },
+            channels(){
+                return this.$store.state.channels.data;
+            },
+        }*/
+        computed: {
+            ...mapState("channels",['data','isLoading']),
+            /*fun(){
+                return 12;
+            },*/
+        },
+        methods: {
+            change(channelId){
+                this.id = channelId;
+                if(channelId === ''){
+                    this.id = 'index';
+                }
+            },
         }
+        /*created() {
+            this.$store.dispatch("channels/fetchDatas");
+        },*/
     }
 </script>
 
@@ -114,6 +145,16 @@
     /*    background-color: mediumseagreen;*/
     /*}*/
     ul li:hover{
+        background-color: mediumseagreen;
+    }
+    .router-link-exact-active.router-link-active{
+        float: left;
+        width: 100px;
+        text-align: center;
+        height: 60px;
+        line-height: 60px;
+        cursor: pointer;
+        font-size: 14px;
         background-color: mediumseagreen;
     }
     .user{

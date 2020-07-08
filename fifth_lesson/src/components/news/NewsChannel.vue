@@ -7,27 +7,33 @@
 
 <script>
     import {getNewsChannels} from "@/services/newService.js";//两级以及两级以上匿名导入方式
+    import {mapState} from 'vuex'
+    let result = mapState("channels",['data','isLoading']);
+
     export default {
         name: "NewsChannel",
         data(){
             return{
-                channels: [],//类型数据
+                /*channels: [],//类型数据*/
                 isCollapse: true,//折叠状态
                 channelId: "5572a108b3cdc86cf39001cd",//选中ID
             };
         },
         async created() {//获取数据
-            const resp=await getNewsChannels();
+            /*const resp=await getNewsChannels();
             this.channels=resp;
-            console.log(this.channels,this.isCollapse);
-            this.channelId=this.channels[0].channelId;
+            console.log(this.channels,this.isCollapse);*/
+            if(this.data.length > 0){
+                this.channelId=this.data[0].channelId;
+            }
         },
         computed: {
+            ...mapState("channels",['data','isLoading']),
             showChannels(){
                 if(this.isCollapse){//折叠状态
-                    return this.channels.slice(0,8);//只显示前8位数据
+                    return this.data.slice(0,8);//只显示前8位数据
                 }else{//展开状态
-                    return this.channels;
+                    return this.data;
                 }
             },
         },

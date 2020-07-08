@@ -6,7 +6,7 @@ import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Error from "../views/404.vue";*/
 //导入vue路由
-
+//npm i vue-router
 Vue.config.productionTip = false
 //1.安装路由
 Vue.use(VueRouter)
