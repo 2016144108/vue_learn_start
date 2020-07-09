@@ -47,6 +47,7 @@ getResp();*/
   console.log(resp);
 });*/
 store.dispatch("channels/fetchDatas");
+store.dispatch("loginUser/whoami");
 
 new Vue({
   router,//配置路由到vue实例中

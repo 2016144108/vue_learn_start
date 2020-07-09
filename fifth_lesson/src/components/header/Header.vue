@@ -22,8 +22,14 @@
                     }">{{item.name}}</router-link></li>
                 </ul>
                 <div class="user">
-                    <span><router-link :to="{name: 'login'}">登录</router-link></span>
-                    <span><router-link :to="{name: 'register'}">注册</router-link></span>
+                    <template v-if="loginUser">
+                        <span>{{loginUser.loginId}}</span>
+                        <span @click="handlerlogout">退出登录</span>
+                    </template>
+                    <template v-else>
+                        <span><router-link :to="{name: 'login'}">登录</router-link></span>
+                        <span><router-link :to="{name: 'register'}">注册</router-link></span>
+                    </template>
                 </div>
             </div>
         </div>
@@ -57,6 +63,10 @@
         }*/
         computed: {
             ...mapState("channels",['data','isLoading']),
+            ...mapState("loginUser",{
+                loginUser: "data",
+                isLogining: "isLoading",
+            }),
             /*fun(){
                 return 12;
             },*/
@@ -68,6 +78,13 @@
                     this.id = 'index';
                 }
             },
+            handlerlogout(){
+                alert(this.loginUser.loginId+"退出");
+                this.$store.dispatch("loginUser/logout");
+                this.$router.push({
+                    name: 'login',
+                });
+            }
         }
         /*created() {
             this.$store.dispatch("channels/fetchDatas");
@@ -162,7 +179,7 @@
         right: 120px;
         top: 0;
         height: 60px;
-        width: 200px;
+        width: 300px;
     }
     .user span{
         float: left;

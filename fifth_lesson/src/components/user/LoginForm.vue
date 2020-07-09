@@ -49,11 +49,11 @@
             async handlerSubmit(){
                 if(this.isEmpty('loginId','账号不能为空')&this.isEmpty('loginPwd','密码不能为空')){
                     const resp = await login(this.userInfo);
-                    console.log(resp);
                     if(resp.code!=0){
                         this.error.server = resp.msg;
                     }else{
                         alert("登录成功");
+                        this.$store.dispatch("loginUser/login",this.userInfo);
                         this.$router.push({
                             name: 'index',
                         });
