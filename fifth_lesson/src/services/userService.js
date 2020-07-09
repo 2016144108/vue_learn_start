@@ -1,5 +1,4 @@
 import axios from 'axios'
-import {async} from "q";
 
 const loginApi = "/api/user/login",
       checkApi = "/api/user/whoami",
@@ -16,7 +15,7 @@ export async function login(params){//用户登录
         localStorage.setItem("token", token);//本地保存令牌
     }
     //console.log(token);
-    return resp;
+    return resp.data;
 }
 
 export async function whoami(){//使用令牌换取用户信息

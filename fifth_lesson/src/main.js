@@ -6,12 +6,12 @@ import store from './store/store.js'
 // import "./services/newService.js"
 import {getNewsChannels} from "./services/newService.js";
 import {getNews} from "./services/newService";
-import { login, whoami, logout, reg} from './services/userService'
+/*import { login, whoami, logout, reg} from './services/userService'*/
 
 Vue.config.productionTip = false
 
-async function test(){
-  /*logout();*///注销
+/*async function test(){
+  /!*logout();*!///注销
   const resp_1 = await login({
     loginId: "user",
     loginPwd: "123123"
@@ -27,7 +27,7 @@ async function test(){
       });//注册
   console.log(resp_3);
 }
-test();
+test();*/
 
 /*
 //第一种使用方式
