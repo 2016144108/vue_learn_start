@@ -27,6 +27,27 @@ const router_config={
             component: ()=>import("../views/ChannelNews"),
         },
         {
+            path: "/Personal",
+            name: "personal",
+            component: ()=>import("../views/Personal"),
+            meta: {//增加保护标识
+                auth: true,
+            },
+        },
+        {
+            path: "/Person",
+            name: "person",
+            component: ()=>import("../views/Person"),
+            meta: {
+                auth: true,
+            },
+        },
+        {
+            path: "/Auth",
+            name: "auth",
+            component: ()=>import("../views/Auth"),
+        },
+        {
             path: "/*",
             component: ()=>import("../views/404"),
         },

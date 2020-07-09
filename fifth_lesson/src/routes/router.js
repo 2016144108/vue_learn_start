@@ -1,10 +1,13 @@
 import Vue from 'vue'
 import VueRouter from "vue-router"
 import router_config from "./router_config"
+import store from '../store/store'
+
 /*import Index from "../views/Index.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Error from "../views/404.vue";*/
+
 //导入vue路由
 //npm i vue-router
 Vue.config.productionTip = false
@@ -12,6 +15,22 @@ Vue.config.productionTip = false
 Vue.use(VueRouter)
 //2.创建路由对象
 const router = new VueRouter(router_config)
+router.beforeEach((to, from, next)=>{
+    if(to.meta.auth){//当是受保护界面时处理方式
+        if(store.state.loginUser.isLoading){
+            next({name: 'auth', query: {returnurl: to.fullpath}});//带着需要跳转的页面进入加载页
+        }else if(store.state.loginUser.data){
+            next();//直接进入
+        }else{
+            next({name: 'login'});//被拦下来
+        }
+    }else{
+        next();
+    }
+    /*console.log('to:',to);//to转向的页面
+    console.log('from:',from);//来自的页面
+    next();//跳转函数*/
+})
 /*const router = new VueRouter({
     //配置
     mode: "history",//路由模式

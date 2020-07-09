@@ -23,7 +23,7 @@
                 </ul>
                 <div class="user">
                     <template v-if="loginUser">
-                        <span>{{loginUser.loginId}}</span>
+                        <span><router-link :to="{name: 'personal'}">{{loginUser.loginId}}</router-link></span>
                         <span @click="handlerlogout">退出登录</span>
                     </template>
                     <template v-else>
